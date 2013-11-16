@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="style/global.css" rel="stylesheet" type="text/css" />
+<link href="style/list.css" rel="stylesheet" type="text/css" />
+<link href="style/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/JavaScript" src="/js/cloud-zoom.1.0.2.min.js"></script>
+<script type="text/javascript">
+  function htab(m, n, s) {
+    s = s + 1;
+    for (var i = 1; i < s; i++) {
+      document.getElementById("nav_" + m + "_" + i).className = "off";
+      document.getElementById("content_" + m + "_" + i).style.display = "none";
+    }
+    document.getElementById("nav_" + m + "_" + n).className = "on";
+    document.getElementById("content_" + m + "_" + n).style.display = "block";
+  }
+  function setHome() {
+    if (document.all) {
+      window.external.AddFavorite(this.location.href, '<%=rs("F_Name")%>');
+    }
+  }
+  function buyit(id) {
+    window.location.href = '/buy.asp?id=' + id;
+  }
+  function LoadCommen(id, page) {
+    //ajax
+    $.ajax({
+      url: "/js/product_commens.asp?id=" + id + "&page=" + page,      //异步方法
+      type: 'get',
+      timeout: 5000,                            //延迟1秒执行
+      error: function () {                        //返回失败后
+      },
+      success: function (htmlstr) {
+        document.getElementById('pcommens').innerHTML = htmlstr;
+      }
+    });
+  }
+</script>
+</head>
+
+<body>
+<div class="container">
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="252" rowspan="2"><img src="images/logo.gif" width="252" height="66" /></td>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>您好，test, 欢迎您回来！ 用户中心| 退出</td>
+        <td height="35" align="right">我的帐户 | 购物车有0件商品，总价￥0.00元</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="right"><img src="images/tel.gif" width="183" height="30" /></td>
+  </tr>
+</table>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="810">
+    	<div class="topnav">
+      	<ul>
+        	<li class="on"><a href="/">首页</a></li>
+        	<li><a href="s">母婴用品</a></li>
+        	<li><a href="d">时尚美妆</a></li>
+        	<li><a href="s">夺宝奇兵</a></li>
+        	<li><a href="d">留言板</a></li>
+        	<li><a href="s">团购商品</a></li>
+        	<li><a href="e">优惠活动</a></li>
+        	<li><a href="a">积分商城</a></li>
+        </ul>
+      </div>
+    </td>
+    <td width="150" align="center"><a href="df">联系我们</a> | <a href="d">热门促销</a></td>
+  </tr>
+</table>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="49" background="images/indexSearchBg.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="66%" align="center" class="white">
+          <form action="" method="get">
+            关键字：
+              <input type="text" class="s_input" />
+            <input name="button" type="submit" class="s_btn" id="button" value="搜索" />
+            </form>
+        </td>        
+        <td width="34%">
+        <div class="hot_keys"><a href="d">热门关键字：aa bb cc dd aa bb cc dd aa bb cc dd</a></div>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<form id="form1" name="form1" method="post" action="?act=do">
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" class="brd">
+  <tr>
+    <td height="32" align="center" class="padl10 font14"><strong>订单详细信息</strong></td>
+  </tr>
+  <tr>
+    <td height="32" class="padl10"><strong>一、收货地址</strong></td>
+  </tr>
+  <tr>
+    <td class="padl10"><p class="line25">姓名：      
+      <input type="text" name="ContactName" id="ContactName" />
+    </p>
+      <p class="line25">电话：
+        <input type="text" name="Tel" id="Tel" />
+      手机：
+        <input type="text" name="Mobile" id="Mobile" />
+      邮箱：
+        <input type="text" name="Email" id="Email" />
+      </p>
+      <p class="line25">地址：
+        <input type="text" name="Address" id="Address" />
+      邮编： 
+        <input type="text" name="Postcode" id="Postcode" />
+      学校：
+      <input type="text" name="School" id="School" />
+      </p></td>
+  </tr>
+  <tr>
+    <td height="32" class="padl10"><p class="line22"><strong>二、支付及配送方式</strong></p>
+      <p class="line22"><strong>支付方式</strong></p>
+      <p>
+        <input name="PayType" type="radio" id="radio" value="1" checked="checked" />
+      在线支付</p>
+      <p>
+        <input type="radio" name="radio" id="radio2" value="2" />
+银行汇款</p>
+      <p>
+        <input type="radio" name="radio" id="radio3" value="3" /> 
+        货到付款
+</p></td>
+  </tr>
+  <tr>
+    <td class="padl10">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="32" class="padl10"><strong>三、结算信息</strong></td>
+  </tr>
+  <tr>
+    <td>
+    <div class="buynow" style="margin:10px; line-height:20px;">
+      <p>商品件数：1件 合计重量：0.70kg 商品金额：￥ 669.00 + 运费：￥ 0.00 - 优惠：￥ 0.00 </p>
+      <p>应付总金额：<span class="price">￥[$TotalCount$]</span></p>
+      <p>发票抬头：
+        <input type="text" name="InvoiceTitle" id="InvoiceTitle" />
+        <br />
+      </p>
+    </div>
+    </td>
+  </tr>
+</table>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="832" height="55" align="left"><input type="image" src="images/submit.gif" width="178" height="40" /></td>
+  </tr>
+</table>
+</form>
+<div class="bigbr"></div>
+$Root$
+</div>
+</body>
+</html>

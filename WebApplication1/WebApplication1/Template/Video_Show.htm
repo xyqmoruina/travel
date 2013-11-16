@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>[$Title$]</title>
+<link href="/style/global.css" rel="stylesheet" type="text/css" />
+<link href="/style/list.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/JavaScript" src="/js/cloud-zoom.1.0.2.min.js"></script>
+<script type="text/javascript">
+function htab(m,n,s) {          
+	s = s + 1;          
+	for(var i=1;i<s;i++) {          
+		document.getElementById("nav_"+m+"_"+i).className="off";          
+		document.getElementById("content_"+m+"_"+i).style.display="none";          
+	}          
+	document.getElementById("nav_"+m+"_"+n).className="on";          
+	document.getElementById("content_"+m+"_"+n).style.display="block";          
+} 
+function setHome(){
+	if ( document.all ){
+		window.external.AddFavorite(this.location.href ,'[$Title$]');
+	}
+}
+</script>
+</head>
+<body>
+<div class="container">
+[$Head$]
+<div class="position">现在位置：<a href="/">首页</a> $Position$</div>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="214" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="brd">
+      <tr>
+        <td class="topic3">排行榜<span class="title_black">TOP</span></td>
+      </tr>
+      <tr>
+        <td>
+        [$Video_Top10$]
+        </td>
+      </tr>
+      
+    </table>
+      <div class="br"></div>
+      <div class="br"></div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="171" align="center" background="/images/l_kfbg.gif" style="font-size:14px;"><p>&nbsp;</p>
+            <p>电话：400-678-6582</p>
+            <p>&nbsp;</p>
+          <p>QQ：138811628</p>
+          <p>&nbsp;</p>
+          <p>MSN ：138811628@msn.cn</p></td>
+        </tr>
+    </table></td>
+    <td width="10" valign="top">&nbsp;</td>
+    <td width="736" valign="top">
+    	<div style="line-height:50px; border-bottom:1px dashed #eee; margin-bottom:10px;"><h1 class="title">[$Title$]</h1></div>
+    	<table width="98%" border="0" cellspacing="0" cellpadding="0">
+    	  <tr>
+    	    <td>
+          <object width='100%' height='460' id='flvPlayer'>
+            <param name='allowFullScreen' value='true'>
+             <param name="allowScriptAccess" value="always"> 
+            <param name='movie' value='/flv/OSplayer.swf?movie=flv&btncolor=0x333333&accentcolor=0x31b8e9&txtcolor=0xdddddd&volume=30&autoload=on&autoplay=on&vTitle=[$Title$]&showTitle=yes&videoid=[$id$]&flvdomain=http://localhost:2176'>
+            <embed src='/flv/OSplayer.swf?movie=flv&btncolor=0x333333&accentcolor=0x31b8e9&txtcolor=0xdddddd&volume=30&autoload=on&autoplay=on&vTitle=[$Title$]&showTitle=yes&videoid=[$id$]&flvdomain=http://localhost:2176' width='100%' height='460' allowFullScreen='true' type='application/x-shockwave-flash' allowScriptAccess='always'>
+           </object>
+           </td>
+  	    </tr>
+  	  </table></td>
+  </tr>
+</table>
+<div class="bigbr"></div>
+[$Root$]
+</div>
+</body>
+</html>

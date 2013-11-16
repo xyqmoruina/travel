@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>购物车</title>
+<link href="/style/global.css" rel="stylesheet" type="text/css" />
+<link href="/style/list.css" rel="stylesheet" type="text/css" />
+<link href="/style/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/commen.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+[$Head$]
+<div class="position">现在位置：首页 &gt; 分类 &gt; 产品名称</div>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" class="brd">
+  <tr>
+    <td width="50" height="30" bgcolor="#E7E7E7">&nbsp;</td>
+    <td width="436" bgcolor="#E7E7E7">商品名称</td>
+    <td width="95" align="center" bgcolor="#E7E7E7">价格</td>
+    <td width="85" align="center" bgcolor="#E7E7E7">数量</td>
+    <td width="87" align="center" bgcolor="#E7E7E7">折扣</td>
+    <td width="110" align="center" bgcolor="#E7E7E7">小计</td>
+    <td width="95" align="center" bgcolor="#E7E7E7">操作</td>
+  </tr>
+  [$CartList$]
+  <tr>
+    <td height="30" colspan="7" align="right" bgcolor="#EFEFEF">商品件数：[$TotalNums$]件 合计重量：[$TotalWeight$]kg 商品总金额（不包含运费）：<span class="price">￥[$TotalPrice$]</span>元&nbsp;</td>
+  </tr>
+</table>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="832" height="55" align="right"><a href="/"><img src="/images/gobuy.gif" width="120" height="33" border="0" /></a></td>
+    <td width="128" align="right"><a href="CheckOut.aspx"><img src="/images/checkout.gif" width="120" height="33" border="0" /></a></td>
+  </tr>
+</table>
+<div class="bigbr"></div>
+[$Root$]
+</div>
+</body>
+</html>

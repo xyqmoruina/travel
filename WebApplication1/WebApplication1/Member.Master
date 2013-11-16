@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Member.master.cs" Inherits="WebApplication1.Member.Member" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">    
+    <title>会员中心</title>
+    <link href="../Style/global.css" rel="stylesheet" type="text/css" />    
+    <link href="Style/member.css" rel="stylesheet" type="text/css" />    
+    <style type="text/css">
+        .auto-style1
+        {
+            width: 261px;
+        }
+    </style>
+</head>
+<body >
+<div class="container">
+    <form id="form1" runat="server" style="background-image: url('/Images/maple.jpg')">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f5f5f5">
+    <tr>
+      <td width="202" height="25" style="background-image: url('/Images/maple.jpg'); background-repeat: no-repeat;"><script type="text/javascript" src="/Member/Member_Status.aspx"></script></td>
+      <td width="290" align="right" style="background-image: url('/Images/maple.jpg'); background-repeat: no-repeat"><script language="JavaScript" type="text/javascript" src="/js/dates.js"></script></td>
+      <td align="right" class="auto-style1" style="background-image: url('/Images/maple.jpg'); background-repeat: no-repeat"><div class="toplist">
+        <ul>
+          <li style="background:url(/images/t1.jpg) 0px 2px no-repeat"><a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location);return false;">设为首页</a></li>
+          <li style="background:url(/images/t2.jpg) 0px 2px no-repeat"><a href="#" class="l1" onclick="window.external.AddFavorite(location.href,document.title);">加入收藏</a ></li>
+          <li style="background:url(/images/t3.jpg) 0px 2px no-repeat"><a href="/contact.asp">联系我们</a></li>
+        </ul>
+      </div></td>
+      <td width="3" align="right">&nbsp;</td>
+    </tr>
+  </table>
+	<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="#ffffff">
+	  <tr>
+	    <td width="21%" height="80"><a href="/"><img src="/images/logo.gif" border="0" /></a></td>
+	    <td width="79%" ><a href="http://www.totcms.com" target="_blank"><img src="/images/banner.gif" alt="地方信息港解决方案" border="0" align="right" class="brd" /></a></td>
+    </tr>
+  </table>
+
+    <table cellpadding="0" cellspacing="0" width="100%" class="nav">
+        <tr>
+            <td width="11%" align="center"><a href="/" id="nav_home">首页</a></td>
+            <td width="11%" align="center"><a href="/Route/List.aspx?typeid=1" id="nav_zb">周边旅游</a></td>
+            <td width="11%" align="center"><a href="/Route/List.aspx?typeid=2" id="nav_gn">国内旅游</a></td>
+            <td width="12%" align="center"><a href="/Route/List.aspx?typeid=3" id="nav_cj">出境旅游</a>  </td>   
+            <td width="11%" align="center"><a href="/Scenery/" id="nav_jd">景点</a></td>
+            <td width="11%" align="center"><a href="/category/2/index_1.htm" id="nav_gl">攻略</a></td>
+        </tr>
+    </table>
+    <div class="br"></div>
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td width="180" valign="top" class="main_left">
+            <div class="left_title">欢迎您：<asp:Label ID="Label1" runat="server" Text=""></asp:Label></div>
+            <div class="left_nav">
+            <ul>                                       
+                <li><a href="Index.aspx">面板首页</a></li>
+                <li>
+                  <a href="#">我的旅行</a>        
+                  <ul>
+                      <li><a href="Route_Order.aspx">线路介绍</a></li>
+                      <li><a href="Hotel_Order.aspx">组队介绍</a></li>                   
+                  </ul>      
+                </li>                          
+                <li><a href="Msgs.aspx">我的短消息</a></li>
+                <li><span class="right"><a href="Article_Add.aspx">上传</a></span><a href="Articles.aspx">游记攻略</a></li>
+                <li><a href="UpPhoto.aspx">上传头像</a></li>
+                <li><a href="Detail.aspx">会员信息</a></li> 
+                <li><a href="ModPass.aspx">修改密码</a></li>
+                <li><a href="ModInfo.aspx">修改资料</a></li>
+                <li><a href="Logout.aspx">退出</a></li>
+            </ul>
+            </div>
+            </td>
+            <td width="10"></td>
+            <td valign="top" class="main_contain">
+                <asp:ContentPlaceHolder ID="CphRight" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</div>
+</body>
+</html>

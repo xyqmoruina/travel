@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>淘特旅游CMS系统,淘特旅游网站管理系统</title>
+<link href="/Skin/Blue/Style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#myFocus{ width:484px; height:311px;}
+</style>
+<script type="text/javascript" src="/js/commen.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="/js/myfocus/myfocus-2.0.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav_my').hover(
+				function(){$(this).addClass('nav_my_on');},
+				function(){$(this).removeClass('nav_my_on');}
+	);
+	$('.cats_off').hover(
+				function(){$(this).addClass('cats_on');},
+				function(){$(this).removeClass('cats_on');}
+	);
+	$('#nav_home').addClass('on');
+	myFocus.set({
+		id:'myFocus',//ID
+		pattern:'mF_kdui',//风格
+		loadIMGTimeout:0
+	});
+});
+</script>
+</head>
+
+<body>
+[$Head$]
+<div class="br"></div>
+<div class="container">
+	<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td width="223" valign="top" class="brd_blue">
+      	<div class="route_tree">
+        	<div class="t">线路分类</div>
+          [$tree_nav$]   
+          <div class="cats_off">
+            <div class="nav_name"><a href="#">主题旅游</a></div>
+            <div class="nav_list">
+              <ul>
+                <li><a href="/Route/Search.aspx?topic=蜜月游">蜜月游</a></li>
+                <li><a href="/Route/Search.aspx?topic=海岛游">海岛游</a></li>
+                <li><a href="/Route/Search.aspx?topic=古镇游">古镇游</a></li>
+                <li><a href="/Route/Search.aspx?topic=山水游">山水游</a></li>
+              </ul>
+            </div>
+            <div class="nav_child">
+              <dl>
+                <dt><a href="/Route/Search.aspx">主题旅游</a></dt>
+                <dd>
+                <li><a href="/Route/Search.aspx?topic=">不限</a></li>
+                <li><a href="/Route/Search.aspx?topic=古镇游">古镇游</a></li>
+                <li><a href="/Route/Search.aspx?topic=山水游">山水游</a></li>
+                <li><a href="/Route/Search.aspx?topic=海岛游">海岛游</a></li>
+                <li><a href="/Route/Search.aspx?topic=乐园游">乐园游</a></li>
+                <li><a href="/Route/Search.aspx?topic=蜜月游">蜜月游</a></li>
+                <li><a href="/Route/Search.aspx?topic=爸妈游">爸妈游</a></li>
+                <li><a href="/Route/Search.aspx?topic=亲子游">亲子游</a></li>
+                <li><a href="/Route/Search.aspx?topic=温泉游">温泉游</a></li> 
+                </dd>
+              </dl>  
+            </div>
+          </div>       
+        </div>
+      </td>
+	    <td width="7" valign="top"></td>
+	    <td width="484" valign="top">
+      <div id="myFocus">
+        <div class="pic">          
+          <ul>
+            [$slides$]
+          </ul>
+        </div>
+      </div>     
+      </td>
+      <td width="7"></td>
+      <td valign="top">
+      <div class="box1">
+      	<div class="topic">最新资讯</div>
+        <div class="content">
+        	<ul>
+          	[$tour_news$]
+          </ul>
+        </div>
+      </div>
+      <div class="br"></div>
+      <div class="box2">
+      	<div class="topic">最新订单</div>
+        <div class="content" id="scroll" style="height:86px; overflow:hidden">
+        	<div id="scroll_text">
+        	<ul>
+          	[$route_order$]
+          </ul>
+          </div>
+        </div>
+        <script type="text/javascript" src="js/scroll.js"></script>
+      </div>
+      </td>
+    </tr>
+  </table>
+  <div class="bigbr"></div>
+  <div class="box3">
+  	<div class="title">1F.周边游</div>
+      <div class="txts">[$route1_area$] <a href="/Route/1/">更多&gt;&gt;</a></div>
+  </div>
+  <table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td width="223" valign="top"><div class="box2">
+	      <div class="topic">★推荐线路</div>
+	      <div class="content">
+	        [$route1_rem$]
+        </div>	      
+      </div></td>	    
+      <td width="6"></td>
+	    <td valign="top">
+      	<div class="box2">
+          <div class="topic">最新线路</div>
+          <div class="br"></div>
+          <div class="line_img">
+            <ul style="margin:0px 0px 12px 0px;">
+              [$route1_list$]
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>      	
+      </td>
+    </tr>
+  </table>
+  <div class="bigbr"></div>
+  <div class="box3">
+  	<div class="title">2F.国内游</div>
+      <div class="txts">[$route2_area$] <a href="/Route/2/">更多&gt;&gt;</a></div>
+  </div>
+  <table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td width="223" valign="top"><div class="box2">
+	      <div class="topic">★推荐线路</div>
+	      <div class="content">[$route2_rem$]</div>
+      </div></td>	    
+      <td width="6"></td>
+	    <td valign="top">
+      	<div class="box2">
+          <div class="topic">最新线路</div>
+          <div class="br"></div>
+          <div class="line_img">
+            <ul style="margin:0px 0px 12px 0px;">
+              [$route2_list$]
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="bigbr"></div>
+  <div class="box3">
+  	<div class="title">3F.出境游</div>
+      <div class="txts">[$route3_area$] <a href="/Route/3/">更多&gt;&gt;</a></div>
+  </div>
+  <table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td width="223" valign="top"><div class="box2">
+	      <div class="topic">★推荐线路</div>
+	      <div class="content">
+	        [$route3_rem$]
+        </div>	      
+      </div></td>	    
+      <td width="6"></td>
+	    <td valign="top">
+      	<div class="box2">
+          <div class="topic">最新线路</div>
+          <div class="br"></div>
+          <div class="line_img">
+            <ul style="margin:0px 0px 12px 0px;">
+              [$route3_list$]
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="bigbr"></div>
+  <div class="box3">
+    <div class="title">酒店</div>
+    <div class="txts"><a href="/Hotel/">更多&gt;&gt;</a></div>
+  </div>
+  <table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td width="223" valign="top"><div class="box2">
+	      <div class="topic">★推荐酒店</div>
+	      <div class="content">
+	        [$hotel_rem$]
+	        </div>
+	      </div></td>
+      <td width="6"></td>
+	    <td valign="top">
+      <div class="box2">
+          <div class="topic">最新酒店</div>
+          <div class="br"></div>
+          <div class="line_img">
+            <ul style="margin:0px 0px 12px 0px;">
+              [$hotel_list$]
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div class="bigbr"></div>
+  <div class="box3">
+    <div class="title">景点/门票</div>
+    <div class="txts"><a href="/Scenery/">更多&gt;&gt;</a></div>
+  </div>
+  <table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td width="223" valign="top"><div class="box2">
+	      <div class="topic">★推荐景点</div>
+	      <div class="content">
+	        [$jd_rem$]
+	        </div>
+	      </div></td>
+       <td width="6"></td>
+	    <td valign="top">
+      <div class="box2">
+          <div class="topic">最新景点</div>
+          <div class="br"></div>
+          <div class="line_img">
+            <ul style="margin:0px 0px 12px 0px;">
+              [$jd_list$]
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+<div class="bigbr"></div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+	    <td width="310" valign="top"><div class="box1">
+	      <div class="topic">旅游租车</div>
+	      <div class="content3">
+	        <ul>
+	          [$cars$]
+	          </ul>
+            <div class="clear"></div>
+	        </div>
+      </div></td>
+	    <td width="7"></td>
+	    <td valign="top"><div class="box1">
+	      <div class="topic">旅游签证</div>
+	      <div class="content3">
+	        <ul>
+	          [$visas$]
+	          </ul>
+            <div class="clear"></div>
+	        </div>
+      </div></td>
+	    <td width="7"></td>
+	    <td width="310" valign="top"><div class="box1">
+	      <div class="topic">旅游攻略</div>
+	      <div class="content">
+	        <ul>
+	          [$tour_gl$]
+	          </ul>
+	        </div>
+      </div></td>
+    </tr>
+  </table>  
+</div>
+[$Root$]
+</body>
+</html>

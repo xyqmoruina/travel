@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>结算中心</title>
+<link href="/style/global.css" rel="stylesheet" type="text/css" />
+<link href="/style/list.css" rel="stylesheet" type="text/css" />
+<link href="/style/cloud-zoom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/commen.js"></script>
+
+<script type="text/javascript">
+function check(obj){
+	if(obj.ContactName.value==''){
+		alert('请填写姓名');
+		obj.ContactName.focus();
+		return false;
+	}else if(obj.Tel.value=='' && obj.Mobile.value==''){
+		alert('电话或手机必填一项');
+		obj.Tel.focus();
+		return false;
+	}else if(obj.Address.value==''){
+		alert('请填写地址');
+		obj.Address.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+[$Head$]
+<form id="form1" name="form1" method="post" action="?act=do" onsubmit="return check(this)">
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" class="brd">
+  <tr>
+    <td height="32" align="center" bgcolor="#f5f5f5" class="padl10 font14"><strong>订单详细信息</strong></td>
+  </tr>
+  <tr>
+    <td height="32" class="padl10"><strong>一、收货地址</strong></td>
+  </tr>
+  <tr>
+    <td class="padl10"><p class="line25">姓名：      
+      <input type="text" name="ContactName" id="ContactName" />
+    (*)</p>
+      <p class="line25">电话：
+        <input type="text" name="Tel" id="Tel" />
+      
+    (*) 手机：
+        <input type="text" name="Mobile" id="Mobile" />
+      邮箱：
+        <input type="text" name="Email" id="Email" />
+      </p>
+      <p class="line25">地址：
+        <input type="text" name="Address" id="Address" />
+      (*) 邮编： 
+        <input type="text" name="Postcode" id="Postcode" />
+      学校：
+      <input type="text" name="School" id="School" />
+      </p></td>
+  </tr>
+  <tr>
+    <td class="padl10">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="32" class="padl10"><strong>二、结算信息</strong></td>
+  </tr>
+  <tr>
+    <td>
+    <div class="buynow" style="margin:10px; line-height:20px;">
+      <p>商品件数：[$TotalNums$]件 合计重量：[$TotalWeight$]kg 商品金额：￥ [$TotalPrice$] + 运费：￥ 0.00 - 优惠：￥ 0.00 </p>
+      <p>应付总金额：<span class="price">￥[$TotalPrice$]</span></p>
+      <p>发票抬头：
+        <input type="text" name="InvoiceTitle" id="InvoiceTitle" />
+        <br />
+      </p>
+    </div>
+    </td>
+  </tr>
+</table>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="832" height="55" align="center"><input type="image" src="/images/submit.gif" width="178" height="40" /></td>
+  </tr>
+</table>
+</form>
+<div class="bigbr"></div>
+[$Root$]
+</div>
+</body>
+</html>

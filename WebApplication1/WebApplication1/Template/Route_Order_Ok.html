@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>预定成功</title>
+<link href="../Skin/Blue/Style.css" rel="stylesheet" type="text/css" />
+<link href="/js/calendar.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/commen.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/calendar.js"></script>
+<script src="/js/jquery.validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav_my').hover(
+				function(){$(this).addClass('nav_my_on');},
+				function(){$(this).removeClass('nav_my_on');}
+	);	
+	$('.cats_off').hover(
+				function(){$(this).addClass('cats_on');},
+				function(){$(this).removeClass('cats_on');}
+	);	
+	//	
+});
+</script>
+</head>
+<body>
+[$Head$]
+<div class="container">	
+<div class="position">当前位置：首页 &gt; 线路</div>
+<div class="orderok_tins">
+  订单号：<span class="red">[$id$] </span><br />
+    订单已提交，正在为您处理（稍后我们工作人员确认订单后，请您进入会员中心进行支付）...
+</div>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" class="brd">
+  <tr>
+    <td colspan="2" align="center" bgcolor="#F3F3F3" class="show_ordertd"><strong>订单明细</strong></td>
+    </tr>
+  <tr>
+    <td align="right" class="show_ordertd">线路：</td>
+    <td>[$Title$]</td>
+  </tr>
+  <tr>
+    <td width="113" align="right" class="show_ordertd">出发日期：</td>
+    <td width="845">[$GoDate$]</td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">价格：</td>
+    <td><span class="red">[$Price$]</span> 元</td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">人数：</td>
+    <td><span class="price">[$PNum$]</span>
+      人</td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">保险：</td>
+    <td>
+    [$Insurance$]</td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">联系人：</td>
+    <td>[$CName$]</td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">手机：</td>
+    <td>[$Tel$]</td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">备注：</td>
+    <td>[$Demons$]</td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">成员名单：</td>
+    <td>[$PMenu$]</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="55" align="center"><input name="button2" type="button" class="btn_submit" id="button2" value="继续查看" onclick="javascript:history.go(-2);" /></td>
+  </tr>
+</table>
+<div class="br"></div>
+</div>
+[$Root$]
+</body>
+</html>

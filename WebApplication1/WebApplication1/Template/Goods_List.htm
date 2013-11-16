@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>[$List_Title$]</title>
+<link href="/style/global.css" rel="stylesheet" type="text/css" />
+<link href="/style/list.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/marquee.js"></script>
+<script type="text/javascript">
+function htab(m,n,s) {          
+	s = s + 1;          
+	for(var i=1;i<s;i++) {          
+		document.getElementById("nav_"+m+"_"+i).className="off";          
+		document.getElementById("content_"+m+"_"+i).style.display="none";          
+	}          
+	document.getElementById("nav_"+m+"_"+n).className="on";          
+	document.getElementById("content_"+m+"_"+n).style.display="block";          
+} 
+function setHome(sites){
+	if ( document.all ){
+		window.external.AddFavorite(this.location.href ,sites);
+	}
+}
+function addcart(id){
+	window.location.href='buy.aspx?id='+id+'&num=1';
+}
+function ShowC(){
+	document.getElementById('allCat2').style.display='block';
+}
+function HiddenC(){
+	document.getElementById('allCat2').style.display='none';
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+[$Head$]
+<div class="position">现在位置：首页&gt;[$List_UrlPosition$]</div>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="210" valign="top">
+    <div id="allCat1" onmouseover="ShowC()" onmouseout="HiddenC()">
+      <div id="allCat2">
+        <div class="head"></div>
+        <!---->
+				<script type="text/javascript" src="/Goods/GetClass.aspx"></script>
+        <!---->
+        <div class="root"></div>
+      </div>
+    </div>
+    <div class="left_nav">
+    	[$Left_Nav$]
+    </div>
+    <div class="br"></div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="brd">
+      <tr>
+        <td class="topic3">排行榜<span class="title_black">TOP</span></td>
+      </tr>
+      <tr>
+        <td>
+        [$Goods_Top10$]
+        </td>
+      </tr>
+      
+    </table>
+      <div class="br"></div>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="brd">
+        <tr>
+          <td class="topic3">编辑<span class="title_black">推荐</span></td>
+        </tr>
+        <tr>
+          <td>[$Goods_Editor_Rm$]</td>
+        </tr>
+      </table>
+      <div class="br"></div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="171" align="center" background="/images/l_kfbg.gif" style="font-size:14px;"><p>&nbsp;</p>
+            <p>电话：400-678-6582</p>
+            <p>&nbsp;</p>
+          <p>QQ：138811628</p>
+          <p>&nbsp;</p>
+          <p>MSN ：138811628@msn.cn</p></td>
+        </tr>
+    </table></td>
+    <td width="10" valign="top">&nbsp;</td>
+    <td width="736" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="73%" align="left" background="/images/topic3_2.gif" class="list_title">[$List_Title$]</td>
+          <td width="27%" height="29" align="right" background="/images/topic3_2.gif"><a href="#">按日期</a><a href="s">↓</a>　<a href="#">按价格↓</a>&nbsp;</td>
+        </tr>        
+    </table>
+      <div class="bigbr"></div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="brd">
+        <tr>
+          <td><div class="imgs_col4">
+        	<ul>
+          [$ContentList$]
+          </ul>
+    			</div>
+         </td>
+        </tr>
+      </table>
+      <div class="br"></div>
+      <div class="page_nav">
+        [$Pages$]
+      </div>
+
+    </td>
+  </tr>
+</table>
+<div class="bigbr"></div>
+[$Root$]
+</div>
+</body>
+</html>

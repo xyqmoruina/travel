@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$Title$-$CategoryName$</title>
+<meta name="description" content="$Description$" />
+<meta name="keywords" content="$Keywords$" />
+<link href="/style/global.css" rel="stylesheet" type="text/css" />
+<link href="/style/show.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/commen.js"></script>
+<script type="text/javascript">
+function homePage(obj){
+	obj.style.behavior="url(#default#homepage)";
+	obj.setHomePage("$SiteUrl$");
+}
+function showCheckCodes(){
+	var codepath=document.getElementById('showcheckcode_img').src;
+	if(codepath.indexOf('blank.gif')!=-1){
+      document.getElementById('showcheckcode_img').src='/CaptchaImage.aspx';
+    } 	
+}
+function checkSub(obj){
+	with(obj){
+		if(Author.value==""){
+			alert("请输入用户名!");
+			Author.select();
+			Author.focus();
+			return false;
+		}
+		if(Content.value=="" || Content.value.length<1){
+			alert("请输入评论内容!");
+			Content.select();
+			Content.focus();
+			return false;
+		}
+		if(CertCode.value==""){
+			alert("请输入验证码!");
+			CertCode.select();
+			CertCode.focus();
+			return false;
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+	$Head$
+  <div class="br"></div>
+  <div class="position">现在位置：<a href="$SiteUrl$">首页</a>$Position$</div>
+  <div class="contain">
+	<!--left-->
+	<div class="left_col">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table">
+	    <tr>
+	      <td class="table_th"><span class="table_title">编辑推荐</span></td>
+	      </tr>
+	    <tr>
+	      <td>
+        $Dynamic_Recommend$
+        </td>
+	      </tr>
+	    </table>
+      <div class="br"></div>
+	  	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table">
+	    <tr>
+	      <td class="table_th"><span class="table_title">热门点击</span></td>
+	      </tr>
+	    <tr>
+	      <td>
+        $Dynamic_Hits$
+        </td>
+	      </tr>
+	    </table>
+      <div class="br"></div>
+	  	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table">
+	    <tr>
+	      <td class="table_th"><span class="table_title">图片推荐</span></td>
+	      </tr>
+	    <tr>
+	      <td class="pad5">
+        $Dynamic_Pics$
+        </td>
+	      </tr>
+	    </table>
+  </div>
+	<div class="right_col">
+	  <div class="show_container">
+				
+			<div class="title">$Title$</div>
+			<div class="titleparas">作者：$Author$ 日期：$ModiTime$ 出处：$SourceFrom$ 点击:<span id="content_hits"></span></div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="content">$Content$</td>
+              </tr>
+              <tr>
+                 <td>
+                 上一篇：$PreArticle$
+                 下一篇：$NextArticle$
+                 </td>
+              </tr>
+        </table>
+			<p align="center">$PageSplitList$</p>	
+			<div class="tools">
+				<ul>
+				<li><a href="$SiteUrl$">返回首页</a></li>
+				<li><a href="javascript:print();">打印本文</a></li>
+				<li><a href="#" onclick="window.external.AddFavorite(location.href,document.title);">加入收藏</a></li>
+				<li><a href="#">返回顶部</a></li>
+				<li><a href="javascript:window.close()">关闭窗口</a></li>
+				</ul>
+			</div>			  
+		  <!--开始评论-->
+<table width="100%" border="0" cellspacing="2" cellpadding="0" class="border">
+              <tr>
+                <td width="50%" class="thead"><img src="/images/line1.gif" width="6" height="17" align="absmiddle" /> 相关文章</td>
+                <td class="thead"><span class="col_right"><a href="/Commen/view.aspx?id=$id$" target="_blank">查看留言</a></span> <img src="/images/line1.gif" width="6" height="17" align="absmiddle" /> 发表评论 </td>
+              </tr>
+              <tr>
+                <td valign="top">
+				<div class="relatelink">
+					<ul>
+					  $RelateLink$
+					</ul>
+				</div>
+				</td>
+                <td valign="top"><form action="/Commen/Save.aspx" method="post" name="form1" id="form1" onsubmit="return checkSub(this)">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="center" valign="middle">用 户：</td>
+                        <td align="left" valign="middle"><input name="Author" type="text" id="Author" size="15" maxlength="30" onfocus="showCheckCodes()" /></td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">内 容：</td>
+                        <td align="left" valign="middle"><textarea name="Content" style="width:90%;" rows="5" id="Content" onfocus="showCheckCodes()"></textarea></td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="middle">验证码：</td>
+                        <td align="left" valign="middle"><input name="CertCode" type="text" onfocus="showCheckCodes()" size="6" />
+                            <img src="/images/blank.gif" align="absmiddle" id="showcheckcode_img" onfocus="showCheckCodes()" onclick="this.src='/CaptchaImage.aspx'" alt="看不清?换一张试试!" /></td>
+                      </tr>
+                      <tr>
+                        <td height="45" align="center" valign="middle"></td>
+                        <td align="left" valign="middle"><input type="hidden" value="$id$" name="ArticleId" />
+                            <input type="hidden" value="$CategoryId$" name="CategoryId" />
+                            <input type="submit" name="Submit" value="提交" />
+                            <input type="reset" name="Submit2" value="重写" /></td>
+                      </tr>
+                    </table>
+                </form></td>
+              </tr>
+        </table>
+		  <!--end -->
+	  </div>
+	</div>
+  <div class="clear"></div>
+</div>
+<div class="br"></div>
+$Root$
+</div>
+<script src="/js/stat.aspx?id=$id$"></script>
+</body>
+</html>

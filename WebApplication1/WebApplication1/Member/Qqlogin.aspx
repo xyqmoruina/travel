@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Qqlogin.aspx.cs" Inherits="TotCms.Web.Member.Qqlogin" %>

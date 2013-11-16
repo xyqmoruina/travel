@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Member_Status.aspx.cs" Inherits="TotCms.Web.Member.Member_Status" %>

@@ -1,0 +1,177 @@
+<div id="head">
+	<div class="container">	
+  	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="290" height="38" style="padding-left:10px; line-height:25px;"><script type="text/javascript" src="/Member/Member_Status.aspx"></script></td>
+      <td></td>
+      <td width="261" align="right"><div class="toplist">
+        <ul>
+          <li style="background:url(/images/t1.jpg) 0px 2px no-repeat"><a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location);return false;">设为首页</a></li>
+          <li style="background:url(/images/t2.jpg) 0px 2px no-repeat"><a href="#" class="l1" onclick="window.external.AddFavorite(location.href,document.title);">加入收藏</a ></li>
+          <li style="background:url(/images/t3.jpg) 0px 2px no-repeat"><a href="/contact.asp">联系我们</a></li>
+        </ul>
+      </div></td>
+      <td width="3" align="right">&nbsp;</td>
+    </tr>
+  </table>
+  	<table width="960" border="0" cellpadding="0" cellspacing="0">
+  	  <tr>
+  	    <td width="237" height="106" align="left"><a href="/"><img src="/images/logo.gif" border="0" /></a></td>
+  	    <td width="552"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  	      <tr>
+  	        <td>
+            <div class="tab_area" style="padding-left:10px;">
+            <ul>
+              <li class="on" id="nav_1_1" onclick="javascript:htab(1,1,6);"><a href="#">线路</a> </li>
+              <li class="off" id="nav_1_2" onclick="javascript:htab(1,2,6);"><a href="#">酒店</a> </li>
+              <li class="off" id="nav_1_3" onclick="javascript:htab(1,3,6);"><a href="#">景点</a> </li>
+              <li class="off" id="nav_1_4" onclick="javascript:htab(1,4,6);"><a href="#"> 租车</a> </li>
+              <li class="off" id="nav_1_5" onclick="javascript:htab(1,5,6);"><a href="#">签证</a> </li>
+              <li class="off" id="nav_1_6" onclick="javascript:htab(1,6,6);"><a href="#">资讯</a> </li>              
+            </ul>
+            </div>
+            </td>
+	        </tr>
+  	      <tr>
+  	        <td height="52" style="border:3px solid #116CC2; padding:5px 10px;">
+            <div id="content_1_1" style="DISPLAY: block">    
+              <form method="get" action="/Route/Search.aspx">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="22"><img src="/Skin/Blue/images/s_left.gif" width="22" height="28" /></td>
+                    <td background="/Skin/Blue/images/s_mid.gif"><input name="key" type="text" class="search_input" id="route_key" /></td>
+                    <td><input type="submit" name="button" id="button" value=" " class="search_btn" /></td>
+                  </tr>
+                </table>
+              </form>
+              <div class="search_hints">推荐：<a href="Dsd">张家界公园、黄龙洞、天门山、猛洞河漂流 四日游</a></div>
+            </div>
+            <div id="content_1_2" style="DISPLAY: none">    
+            	<form method="get" action="/Hotel/Search.aspx">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="22"><img src="/Skin/Blue/images/s_left.gif" width="22" height="28" /></td>
+                    <td background="/Skin/Blue/images/s_mid.gif"><input name="key" type="text" class="search_input" id="hotel_key" /></td>
+                    <td><input type="submit" name="button" id="button" value=" " class="search_btn" /></td>
+                  </tr>
+                </table>
+              </form>
+              <div class="search_hints">推荐：<a href="Dsd">张家界公园、黄龙洞、天门山、猛洞河漂流 四日游</a></div>        
+            </div>
+            <div id="content_1_3" style="DISPLAY: none">   
+            	<form method="get" action="/Scenery/Search.aspx">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="22"><img src="/Skin/Blue/images/s_left.gif" width="22" height="28" /></td>
+                    <td background="/Skin/Blue/images/s_mid.gif"><input name="key" type="text" class="search_input" id="jd_key" /></td>
+                    <td><input type="submit" name="button" id="button" value=" " class="search_btn" /></td>
+                  </tr>
+                </table>
+              </form>
+              <div class="search_hints">推荐：<a href="Dsd">张家界公园、黄龙洞、天门山、猛洞河漂流 四日游</a></div>         
+            </div>
+            <div id="content_1_4" style="DISPLAY: none">   
+            	<form method="get" action="/Car/Search.aspx">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="22"><img src="/Skin/Blue/images/s_left.gif" width="22" height="28" /></td>
+                    <td background="/Skin/Blue/images/s_mid.gif"><input name="key" type="text" class="search_input" id="car_key" /></td>
+                    <td><input type="submit" name="button" id="button" value=" " class="search_btn" /></td>
+                  </tr>
+                </table>
+              </form>
+              <div class="search_hints">推荐：<a href="Dsd">张家界公园、黄龙洞、天门山、猛洞河漂流 四日游</a></div>         
+            </div>
+            <div id="content_1_5" style="DISPLAY: none">    
+            	<form method="get" action="/Visa/Search.aspx">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="22"><img src="/Skin/Blue/images/s_left.gif" width="22" height="28" /></td>
+                    <td background="/Skin/Blue/images/s_mid.gif"><input name="key" type="text" class="search_input" id="visa_key" /></td>
+                    <td><input type="submit" name="button" id="button" value=" " class="search_btn" /></td>
+                  </tr>
+                </table>
+              </form>
+              <div class="search_hints">推荐：<a href="Dsd">张家界公园、黄龙洞、天门山、猛洞河漂流 四日游</a></div>        
+            </div>
+            <div id="content_1_6" style="DISPLAY: none">     
+            	<form method="get" action="/Search.aspx">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="22"><img src="/Skin/Blue/images/s_left.gif" width="22" height="28" /></td>
+                    <td background="/Skin/Blue/images/s_mid.gif"><input name="keyword" type="text" class="search_input" id="news_key" /></td>
+                    <td><input type="submit" name="button" id="button" value=" " class="search_btn" /></td>
+                  </tr>
+                </table>
+              </form>
+              <div class="search_hints">推荐：<a href="Dsd">张家界公园、黄龙洞、天门山、猛洞河漂流 四日游</a></div>       
+            </div>
+            </td>
+	        </tr>
+	      </table></td>
+  	    <td width="171"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  	      <tr>
+  	        <td height="26" align="center">在线客服：6410861</td>
+	        </tr>
+  	      <tr>
+  	        <td height="26" align="center">Tel：<span class="price">13151331366</span></td>
+	        </tr>
+	      </table></td>
+	    </tr>
+	  </table>
+    <table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><div id="nav">
+        <a href="/" id="nav_home">首页</a>
+        <a href="/Route/List.aspx?typeid=1" id="nav_zb">周边旅游</a>
+        <a href="/Route/List.aspx?typeid=2" id="nav_gn">国内旅游</a>
+        <a href="/Route/List.aspx?typeid=3" id="nav_cj">出境旅游</a>       
+        <a href="/Hotel/" id="nav_hotel">酒店</a>
+        <a href="/Scenery/" id="nav_jd">景点</a>
+        <a href="/Car/" id="nav_car">租车</a>
+        <a href="/Visa/" id="nav_visa">签证</a>
+        <a href="/category/2/index_1.htm" id="nav_gl">攻略</a>       
+        </div></td>
+        <td>
+        <div id="nav_my" class="nav_my_off">
+        	<span class="title">我的帐户</span>
+          <div class="content" style="z-index:999;">
+            <ul>
+              <li><a href="/Member/">控制中心</a></li>
+              <li><a href="/Member/Route_Order.aspx">我的订单</a></li>
+              <li><a href="/Member/BankOnline.aspx">在线充值</a></li>
+              <li><a href="/Member/ModPass.aspx">修改密码</a></li>
+            </ul>
+          </div>
+        </div>
+        </td>
+      </tr>
+    </table>
+	</div>
+</div>
+<div class="br"></div>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="32"><img src="/Skin/Blue/images/jptj.gif" width="32" height="72" /></td>
+    <td style="border-bottom:1px solid #FFDDAB;border-top:1px solid #FFDDAB;border-right:1px solid #FFDDAB;">
+    <div id="jptj">
+    <ul>
+      <li><a href="#/changshawangfan-82720113610425288.html" target="_blank">长沙市内一日游</a> ￥118</li>
+      <li><a href="#/changshawangfan-82720113787100.html" target="_blank">韶山、花明楼一日游</a> ￥135</li>
+      <li><a href="#/changshawangfan-82720113687844476176699.html" target="_blank">衡山、南岳大庙一日游</a> ￥328</li>
+      <li><a href="#/changshawangfan-8272011370200151.html" target="_blank">岳阳楼、君山岛一日游</a> ￥248</li>
+      <li><a href="#/changshawangfan-82764.html" target="_blank">凤凰古城、苗寨二日游</a> ￥368</li>
+      <li><a href="#/changshawangfan-827201242384108.html" target="_blank">崀山二日游</a> ￥428</li>
+    </ul>
+      <ul>
+        <li><a href="#/changshawangfan-8272012111289236.html" target="_blank">宁乡金太阳温泉一日游</a> ￥198</li>
+        <li><a href="#/sankepintuan-95073.html" target="_blank">猛洞河漂流一日游</a> ￥218</li>
+        <li><a href="#/sankepintuan-95076.html" target="_blank">茅岩河+九天洞一日游</a> ￥188</li>
+        <li><a href="#/sankepintuan-95072.html" target="_blank">天门山一日游</a> ￥268</li>
+        <li><a href="#/sankepintuan-950167.html" target="_blank">芷江、洪江古城二日游</a> ￥268</li>
+        <li><a href="#/sankepintuan-950169.html" target="_blank">凤凰古城二日游</a> ￥308</li>
+      </ul>
+      </div>
+      </td>
+  </tr>
+</table>

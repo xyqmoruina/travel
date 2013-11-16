@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>[$SeoTitle$]</title>
+<meta name="description" content="[$Describ$]" />
+<meta name="keywords" content="[$Keywords$]" />
+<link href="/Skin/Blue/Style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#myFocus{ width:450px; height:283px;}
+</style>
+<script type="text/javascript" src="/js/commen.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/myfocus/myfocus-2.0.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav_my').hover(
+				function(){$(this).addClass('nav_my_on');},
+				function(){$(this).removeClass('nav_my_on');}
+	);	
+});
+myFocus.set({
+	id:'myFocus',//ID
+	pattern:'mF_games_tb',//风格
+	loadIMGTimeout:0
+});
+</script>
+</head>
+
+<body>
+[$Head$]
+<div class="container">	
+<div class="position">当前位置：<a href="/">首页</a> &gt; <a href="/Route/">旅游线路</a> &gt;<a href="/Route/List.aspx?typeid=[$TypeId$]">[$TypeName$]</a> &gt; <a href="/Route/List.aspx?typeid=[$TypeId$]&city1=[$City1$]">[$City1Name$]</a> &gt;<a href="/Route/List.aspx?typeid=[$TypeId$]&city1=[$City1$]&city2=[$City2$]">[$City2Name$]</a></div>
+<div class="show_title"><h1>[$Title$]</h1></div>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="466" valign="top">
+      <div id="myFocus">
+        <div class="pic">
+          <!--图片列表-->
+          <ul>
+            [$Pics$]
+          </ul>
+        </div>
+      </div></td>
+    <td width="7"></td>
+    <td valign="top">
+    <div class="show_blackbox">
+    	<p>线路编号：[$KeyCode$]</p>
+    	<p>线路价格：¥ <span class="price">[$Price$]</span> 元</p>
+    	<p>出发城市：[$FromCity$]</p>
+    	<p>预订须知：请提前[$OrderDay$]天预订</p>
+    	<p>往返交通[$Traffic$]</p>
+      <p>行程天数：[$Days$] 天</p>
+    	<p>付款方式：支付宝信用卡网银支付</p>
+    	
+    </div>
+    <form action="Order.aspx" method="get" enctype="application/x-www-form-urlencoded">
+    <div class="show_prices">
+      <ul>
+      	<li class="head"><span class="title">名称</span><span class="pricem">散客</span><span class="pricec">团购(5人以上)</span></li>
+        [$Prices$]
+      </ul>
+    </div>
+    <div class="show_orderbox">
+    <input type="hidden" name="id" value="[$id$]" />
+    <input type="image" src="/images/order.gif" /></a>
+    <a href="javascript:setHome()" title="添加到收藏夹"><img src="/images/favorite.gif" alt="add to cart" border="0"></a>
+    </div>
+    </form>
+    </td>
+  </tr>
+</table>
+<div class="show_hintbox">
+  <strong>提示：</strong>[$Demons$]
+</div>
+<div class="tab_show" style="padding-left:10px;">
+  <ul>
+    <li class="on" id="nav_2_1" onclick="javascript:htab(2,1,6);">线路特色 </li>
+    <li class="off" id="nav_2_2" onclick="javascript:htab(2,2,6);">预定需知 </li>
+    <li class="off" id="nav_2_3" onclick="javascript:htab(2,3,6);">温馨提示 </li>
+    <li class="off" id="nav_2_4" onclick="javascript:htab(2,4,6);">线路行程 </li>
+    <li class="off" id="nav_2_5" onclick="javascript:htab(2,5,6);">线路咨询 </li>
+    <li class="off" id="nav_2_6" onclick="javascript:htab(2,6,6);">旅游攻略 </li>              
+  </ul>
+</div>
+<div class="tab_show_cnt">
+  <div id="content_2_1" style="DISPLAY: block">[$Tese$]</div>
+  <div id="content_2_2" style="DISPLAY: block">[$Ydxz$]</div>
+  <div id="content_2_3" style="DISPLAY: block">[$Wxts$]</div>
+  <div id="content_2_4" style="DISPLAY: block">[$Xc$]</div>
+  <div id="content_2_5" style="DISPLAY: block">            
+  </div>
+  <div id="content_2_6" style="DISPLAY: none">            
+  </div>
+</div>            
+<div class="br"></div>
+</div>
+[$Root$]
+</body>
+</html>

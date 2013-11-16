@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>[$Title$]-旅游租车</title>
+<meta name="description" content="[$Describ$]" />
+<meta name="keywords" content="[$Keywords$]" />
+<link href="../Skin/Blue/Style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#myFocus{ width:450px; height:283px;}
+#allmap{ width:100%; height:400px;}
+</style>
+<script type="text/javascript" src="/js/commen.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/myfocus/myfocus-2.0.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav_my').hover(
+				function(){$(this).addClass('nav_my_on');},
+				function(){$(this).removeClass('nav_my_on');}
+	);	
+	$('#nav_car').addClass('on');
+});
+</script>
+</head>
+
+<body>
+[$Head$]
+<div class="container">	
+<div class="position">当前位置：<a href="/">首页</a> &gt; <a href="/Car/">旅游租车</a> &gt; <a href="/Car/List.aspx?brandid=[$BrandId$]">[$BrandTitle$]</a> &gt; <a href="/Car/List.aspx?typeid=[$TypeId$]">[$TypeTitle$]</a></div>
+<div class="show_title"><h1>[$Title$]</h1></div>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="466" valign="top">
+      <div id="myFocus">
+        <div class="pic"> <a href="[$Photo$]" target="_blank"><img src="[$Photo$]" width="450" height="283" border="0" /></a>
+        </div>
+      </div></td>
+    <td width="7"></td>
+    <td valign="top">
+    <div class="show_blackbox">
+    	<p>品牌：[$BrandTitle$]</p>
+    	<p>车型：[$TypeTitle$]</p>
+<p>点击：[$Hits$]次</p>
+    	<p>更新日期：[$PubDate$]</p>
+    	
+    </div>
+    <form action="Order.aspx" method="get" enctype="application/x-www-form-urlencoded">
+    <div class="show_prices">
+      <ul>
+      	<li class="head"><span class="title">名称</span><span class="pricem">市场价</span><span class="pricec">优惠价</span></li>
+        [$Prices$]
+      </ul>
+    </div>
+    <div class="show_orderbox">
+    <input type="hidden" name="id" value="[$id$]" />
+    <input type="image" src="/images/order.gif" /></a>
+    <a href="javascript:setHome()" title="添加到收藏夹"><img src="/images/favorite.gif" alt="add to cart" border="0"></a>
+    </div>
+    </form>
+    </td>
+  </tr>
+</table>
+<div class="show_hintbox">
+  <strong>提示：</strong>.............</div>
+<div class="tab_show" style="padding-left:10px;">
+  <ul>
+    <li class="on" id="nav_2_1" onclick="javascript:htab(2,1,2);">介绍</li>
+    <li class="off" id="nav_2_2" onclick="javascript:htab(2,2,2);"> </li>        
+  </ul>
+</div>
+<div class="tab_show_cnt">
+  <div id="content_2_1" style="DISPLAY: block;">[$Content$]</div>
+  <div id="content_2_2" style="DISPLAY: block;"> 		
+  </div>  
+</div>            
+<div class="br"></div>
+</div>
+[$Root$]
+</body>
+</html>

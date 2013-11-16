@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$CategoryName$</title>
+<link href="/style/global.css" rel="stylesheet" type="text/css" />
+<link href="/style/list.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/JavaScript" src="/js/cloud-zoom.1.0.2.min.js"></script>
+<script type="text/javascript">
+function htab(m,n,s) {          
+	s = s + 1;          
+	for(var i=1;i<s;i++) {          
+		document.getElementById("nav_"+m+"_"+i).className="off";          
+		document.getElementById("content_"+m+"_"+i).style.display="none";          
+	}          
+	document.getElementById("nav_"+m+"_"+n).className="on";          
+	document.getElementById("content_"+m+"_"+n).style.display="block";          
+} 
+function setHome(){
+	if ( document.all ){
+		window.external.AddFavorite(this.location.href ,'[$Title$]');
+	}
+}
+</script>
+</head>
+<body>
+<div class="container">
+$Head$
+<div class="position">现在位置：<a href="/">首页</a> $Position$</div>
+<h2 style="margin:10px 0px;">$CategoryName$</h2>
+<div class="imgs_4">
+  <ul>
+    $ArticleList$
+  </ul>
+  <div class="clear"></div>
+</div>
+<div class="bigbr"></div>
+<div class="pages">$ShowPage$</div>
+<div class="bigbr"></div>
+$Root$
+</div>
+</body>
+</html>

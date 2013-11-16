@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>[$List_Title$]</title>
+<link href="../Skin/Blue/Style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/commen.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav_my').hover(
+				function(){$(this).addClass('nav_my_on');},
+				function(){$(this).removeClass('nav_my_on');}
+	);		
+	$('#nav_visa').addClass('on');
+});
+</script>
+</head>
+
+<body>
+[$Head$]
+<div class="container">	
+<div class="position">当前位置：<a href="/">首页</a> &gt; <a href="/Visa/">旅游签证</a> [$pos_nav$]</div>
+	<div id="list_contain">
+    <div class="left">
+        <div class="box4">
+        	<div class="title">分类</div>          
+          <div class="col3">
+          	<h2>国家</h2>
+            <ul>            	
+              [$country_nav$]
+            </ul>
+          </div>          
+          <div class="col3">
+          	<h2>类型</h2>
+            <ul>
+            	[$type_nav$]
+            </ul>
+          </div>
+          <div class="clear"></div>        
+        </div>
+        
+    </div>
+    <div class="right">
+      <div class="box4">
+        <div class="title">旅游签证</div>
+        <div class="line_img" style="margin:5px 0px;">
+        	<ul>
+            [$ContentList$]          
+          </ul>
+          <div class="clear"></div>
+        </div>             
+      </div>
+      <div class="pages">
+        	[$Pages$]
+      </div>
+    </div>
+  </div>
+	<div class="br"></div>  
+</div>
+[$Root$]
+</body>
+</html>

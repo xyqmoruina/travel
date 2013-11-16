@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$CategoryName$</title>
+<meta name="description" content="$Description$" />
+<meta name="keywords" content="$Keywords$" />
+<link href="/Skin/Blue/Style.css" rel="stylesheet" type="text/css" />
+<link href="/style/show.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/commen.js"></script>
+</head>
+
+<body>
+$Head$
+<div class="container">  
+  <div class="position">现在位置：<a href="$SiteUrl$">首页</a>$Position$</div>
+  <div class="contain">
+	<!--left-->
+	<div class="left">
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table">
+	    <tr>
+	      <td class="table_th"><span class="table_title">编辑推荐</span></td>
+	      </tr>
+	    <tr>
+	      <td>
+        	<div class="Texts">
+          	<ul>
+            $Global_Recommend$
+            </ul>
+          </div>
+        </td>
+	      </tr>
+	    </table>
+      <div class="br"></div>
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table">
+	    <tr>
+	      <td class="table_th"><span class="table_title">热点排行</span></td>
+	      </tr>
+	    <tr>
+	      <td>
+          <div class="Texts">
+              <ul>
+              $Global_Hits$
+              </ul>
+          </div>
+        </td>
+	      </tr>
+	    </table>
+  </div>
+	<div class="right">
+  	<div class="listtitle">$CategoryName$</div>
+	  <div class="rowslist">    	
+		  $GetCategoryArticles$
+		</div>
+	</div>
+  <div class="clear"></div>
+</div>
+<div class="br"></div>
+$Root$
+</div>
+</body>
+</html>

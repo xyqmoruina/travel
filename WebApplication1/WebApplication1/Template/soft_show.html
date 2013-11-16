@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$SoftName$-下载频道</title>
+<META content="$description$" name=Description>
+<META content="$keywords$" name=Keywords>
+<link href="/style/global.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/commen.js"></script>
+
+<script type="text/javascript">
+function showCheckCode(){
+	var codepath=document.getElementById('checkcode_img').src;
+	if(codepath.indexOf('blank.gif')!=-1){
+      document.getElementById('checkcode_img').src='/image.asp';
+    } 	
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+$Head$
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="25" align="left"> 您现在的位置：$position$</td>
+  </tr>
+</table>
+<div class="br"></div>
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="160" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="table2">
+      <tr>
+        <td class="table2_th"><span class="table2_title"><a href="">软件分类</a></span></td>
+      </tr>
+      <tr>
+        <td valign="top" class="pad_5"><div class="soft_cats">
+          <ul>
+            $GetBrotherList$ 
+          </ul>
+        </div></td>
+      </tr>
+    </table></td>
+    <td width="5" valign="top">&nbsp;</td>
+    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="border">
+      <tr>
+        <td height="35" bgcolor="#F4F9FF"><h2>$SoftName$</h2></td>
+        </tr>
+      <tr>
+        <td valign="top" class="pad_5">
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="22%" height="28"><strong>版本：</strong></td>
+              <td width="78%">$SoftVersion$</td>
+            </tr>
+            <tr>
+              <td height="28"><strong>软件语言：</strong></td>
+              <td>$SoftLanguage$</td>
+            </tr>
+            <tr>
+              <td height="28"><strong>软件授权：</strong></td>
+              <td>$SoftLicense$</td>
+            </tr>
+            <tr>
+              <td height="28"><strong>软件属性</strong></td>
+              <td>$SoftAttr$</td>
+            </tr>
+            <tr>
+              <td height="28"><strong>软件大小：</strong></td>
+              <td>$SoftSize$</td>
+            </tr>
+            <tr>
+              <td height="28"><strong>星级：</strong></td>
+              <td><img src="/Download/Images/star$SoftStars$.gif" /></td>
+            </tr>
+            <tr>
+              <td height="28"><strong>运行环境：</strong></td>
+              <td>$SoftOs$</td>
+            </tr>
+            <tr>
+              <td height="28"><strong>软件作者：</strong></td>
+              <td><a href="$SoftAuthorUrl$" target="_blank">$SoftAuthor$</a></td>
+            </tr>
+            <tr>
+              <td height="28"><strong>演示地址：</strong></td>
+              <td><a href="$SoftDemoUrl$" target="_blank">$SoftDemoUrl$</a></td>
+            </tr>
+            <tr>
+              <td height="28"><strong>下载次数：</strong></td>
+              <td><span id="SoftHits"></span></td>
+            </tr>
+
+          </table></td>
+          <td width="300"><div align="center"><img src="$SoftPhoto$" width="219" height="227" /></div></td>
+        </tr>
+      </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="24"><strong>软件介绍：</strong></td>
+          </tr>
+          <tr>
+            <td class="content"><span class="newstitle">$SoftDesc$</span></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="24"><strong>下载地址：</strong></td>
+          </tr>
+          <tr>
+            <td height="22"><div class="downurl">
+              <ul>
+                $DownUrls$
+              </ul>
+            </div></td>
+          </tr>
+        </table>
+        <div>相关下载：
+        <ul>
+        $RelateLink$
+        </ul>
+        </div>
+        </td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+$Root$
+</div>
+<script src="/Download/Stat.aspx?id=$id$" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>酒店预定-[$Title$]</title>
+<link href="../Skin/Blue/Style.css" rel="stylesheet" type="text/css" />
+<link href="/js/calendar.css" rel="stylesheet" type="text/css" />
+<link href="../js/jquery-ui/css/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/commen.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/calendar.js"></script>
+<script type="text/javascript" src="../js/jquery-ui/js/jquery-ui-min.js"></script>
+<script src="/js/jquery.validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav_my').hover(
+				function(){$(this).addClass('nav_my_on');},
+				function(){$(this).removeClass('nav_my_on');}
+	);	
+	$('#nav_hotel').addClass('on');
+	//
+	$("#dialog-win").dialog({
+		autoOpen: false,
+		width: 530,
+		height: 350,
+		modal: true,
+		title:'登录',
+		close: function () {
+			$( this ).dialog( "close" );
+		}
+	});
+	// validate signup form on keyup and submit
+	$("#orderForm").validate({
+		rules: {
+			InDate: {
+				required: true
+			},
+			PNum: {
+				required: true,
+				digits: true
+			},
+			CName: {
+				required: true
+			},
+			Mobile: {
+				required: true
+			}
+		},messages: {
+			InDate:"不能为空",
+			PNum:"只能填写数字",
+			CName:"不能为空",
+			Mobile:"不能为空"			
+		}
+	});
+	$("#LoginForm").validate({
+		rules: {
+			UserName: {
+				required: true
+			},
+			PassWord: {
+				required: true
+			},
+			CheckCode: {
+				required: true
+			}
+		},messages: {
+			UserName:"不能为空",
+			PassWord:"不能为空",
+			CheckCode:"不能为空"
+		}
+	});
+});
+</script>
+</head>
+<body>
+[$Head$]
+<div class="container">	
+<div class="position">当前位置：<a href="/">首页</a> &gt; <a href="/Hotel/">酒店预定</a> &gt; </div>
+<div class="show_title">
+  <h1>酒店预定：[$Title$]</h1></div>
+<form action="?act=do&id=[$id$]&typeid=[$typeid$]" method="post" enctype="application/x-www-form-urlencoded" id="orderForm">
+<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" class="brd">
+  <tr>
+    <td width="113" align="right" class="show_ordertd">入店日期：</td>
+    <td width="845"><input name="InDate" type="text" class="input_normal" id="InDate" onclick="displayCalendar(this,'yyyy-mm-dd',this)" /> 
+    离店日期：
+      <input name="OutDate" type="text" class="input_normal" id="OutDate" onclick="displayCalendar(this,'yyyy-mm-dd',this)" /></td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">到达时间：</td>
+    <td><input name="ArriveTime" type="text" class="input_normal" id="ArriveTime" /></td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">价格类型：</td>
+    <td>
+    <select name="PType" class="select_normal" id="PType">
+    [$PType$]
+    </select></td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">人数：</td>
+    <td><input name="PNum" type="text" class="input_normal" id="PNum" /></td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">联系人：</td>
+    <td><input name="CName" type="text" class="input_normal" id="CName" /></td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">手机：</td>
+    <td><input name="Mobile" type="text" class="input_normal" id="Mobile" /></td>
+  </tr>
+  <tr>
+    <td align="right" class="show_ordertd">备注：</td>
+    <td height="90" valign="top"><textarea name="Demons" cols="45" rows="5" class="textarea" id="Demons"></textarea></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="55" align="left"><input name="button2" type="submit" class="btn_submit" id="button2" value="提交订单" /></td>
+  </tr>
+</table>
+</form>
+<div class="br"></div>
+</div>
+[$Root$]
+<div id="dialog-win" title="window">
+	<form id="LoginForm" name="LoginForm" method="post" action="/Login.aspx?act=do&gourl=%2FRoute%2FOrder.aspx%3Fptype=7%26id=10">
+  <div class="br"></div>
+  <table width="100%" align="center" cellpadding="0" cellspacing="0" class="brd">
+    <tr>
+      <th colspan="2" class="th">会员登录</th>
+    </tr>
+    <tr>
+      <td height="22" colspan="2" bgcolor="#FFFFFF" class="padleft5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="39%" height="32" align="right" bgcolor="#FFFFFF" class="padleft5"><strong>用户名</strong>：</td>
+      <td width="61%" height="45" bgcolor="#FFFFFF" class="pformleft"><input name="UserName" 
+              id="UserName"  class="input_normal" /></td>
+    </tr>    
+    <tr>
+      <td width="39%" height="32" align="right" bgcolor="#FFFFFF" class="padleft5"><strong>密&nbsp;&nbsp;&nbsp;码</strong>：</td>
+      <td width="61%" height="45" bgcolor="#FFFFFF" class="pformleft"><input name="PassWord" 
+              type="password" id="PassWord"  class="input_normal" /></td>
+    </tr>
+	<tr>
+      <td width="39%" height="32" align="right" bgcolor="#FFFFFF" class="padleft5"><strong>验证码</strong>：</td>
+    <td width="61%" height="45" bgcolor="#FFFFFF" class="pformleft">
+          
+          
+          <input size="6" name="CheckCode" class="input_code" id="CheckCode" />          
+          <img src="/CaptchaImage.aspx" alt="" align="absmiddle" onClick="this.src='/CaptchaImage.aspx?time='+Math.random()"; /></td>
+    </tr>
+    <tr>
+      <td bgcolor="#FFFFFF" class="row4" height="50">&nbsp;</td>
+      <td height="60" align="left" bgcolor="#FFFFFF" class="row4"><input name="Submit" type="submit" class="btn_submit" value="登 录" />
+        <a href="/Reg.aspx"> &nbsp;注册会员&gt;</a></td>
+    </tr>
+  </table>
+</form>
+</div>
+[$login_win$]
+</body>
+</html>
